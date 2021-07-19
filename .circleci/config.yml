@@ -13,6 +13,18 @@ jobs:
       - checkout
       # install dependencies in both apps
       - run:
-          name: hello
+          name: install
           command: |
-            echo "hello-world"
+            yarn backend:install
+      - run:
+          name: install
+          command: |
+            yarn frontend:install
+      - run:
+          name: install
+          command: |
+            yarn backend:build
+      - run:
+          name: install
+          command: |
+            yarn forntend:build
